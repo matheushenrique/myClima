@@ -18,3 +18,8 @@ let APP_KEY = "146ac34224ce35572b7b2fbd78b8f259"
 typealias DownloadComplete = () -> ()
 //HARD CODING
 let CURRENT_WEATHER_URL = "\(BASE_URL)\(LATITUDE)35\(LONGITUDE)139\(APP_ID)\(APP_KEY)"
+
+let BASE_FORECAST_URL = "http://api.openweathermap.org/data/2.5/forecast/daily?"
+let QNT_DAYS = "&cnt="
+//api.openweathermap.org/data/2.5/forecast/daily?lat=35&lon=139&cnt=10
+let FORECAST_WEATHER_URL = "\(BASE_FORECAST_URL)\(LATITUDE)35\(LONGITUDE)139\(QNT_DAYS)10\(APP_ID)\(APP_KEY)"

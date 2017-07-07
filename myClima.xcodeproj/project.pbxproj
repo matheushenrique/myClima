@@ -15,6 +15,8 @@
 		EFD536051F0853A00082DD31 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFD536031F0853A00082DD31 /* Main.storyboard */; };
 		EFD536071F0853A00082DD31 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFD536061F0853A00082DD31 /* Assets.xcassets */; };
 		EFD5360A1F0853A00082DD31 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFD536081F0853A00082DD31 /* LaunchScreen.storyboard */; };
+		EFEF36A51F0F0D9C0019578C /* Forecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEF36A41F0F0D9C0019578C /* Forecast.swift */; };
+		EFEF36A71F0F2AAF0019578C /* WeatherCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEF36A61F0F2AAF0019578C /* WeatherCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		EFD536061F0853A00082DD31 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EFD536091F0853A00082DD31 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EFD5360B1F0853A00082DD31 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EFEF36A41F0F0D9C0019578C /* Forecast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Forecast.swift; sourceTree = "<group>"; };
+		EFEF36A61F0F2AAF0019578C /* WeatherCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				EFD536011F0853A00082DD31 /* ClimaVC.swift */,
+				EFEF36A61F0F2AAF0019578C /* WeatherCell.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -114,6 +119,7 @@
 			children = (
 				EF49C6B51F0DD42700FB8F72 /* CurrentWeather.swift */,
 				EF49C6B31F0DD11600FB8F72 /* Constants.swift */,
+				EFEF36A41F0F0D9C0019578C /* Forecast.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -244,8 +250,10 @@
 			files = (
 				EFD536021F0853A00082DD31 /* ClimaVC.swift in Sources */,
 				EFD536001F0853A00082DD31 /* AppDelegate.swift in Sources */,
+				EFEF36A71F0F2AAF0019578C /* WeatherCell.swift in Sources */,
 				EF49C6B61F0DD42700FB8F72 /* CurrentWeather.swift in Sources */,
 				EF49C6B41F0DD11600FB8F72 /* Constants.swift in Sources */,
+				EFEF36A51F0F0D9C0019578C /* Forecast.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

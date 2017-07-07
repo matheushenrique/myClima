@@ -59,7 +59,7 @@ class CurrentWeather {
         }
     }
     
-    func downloadWeatherDetails(completed: DownloadComplete){
+    func downloadWeatherDetails(completed: @escaping DownloadComplete){
         // alamofire where to download from
         let currentWeatherURL = URL(string: CURRENT_WEATHER_URL)!
         //        print(CURRENT_WEATHER_URL)
@@ -128,8 +128,8 @@ class CurrentWeather {
                     }
                 }
             }
-             print(response)
-        }
-        completed()
+            print(response)
+            completed()
+        }        
     }
 }

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		D65228DCC39737FB68CD9319 /* Pods_myClima.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64514A1649BDF8F806B30742 /* Pods_myClima.framework */; };
+		EF49C6B41F0DD11600FB8F72 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF49C6B31F0DD11600FB8F72 /* Constants.swift */; };
+		EF49C6B61F0DD42700FB8F72 /* CurrentWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF49C6B51F0DD42700FB8F72 /* CurrentWeather.swift */; };
 		EFD536001F0853A00082DD31 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD535FF1F0853A00082DD31 /* AppDelegate.swift */; };
 		EFD536021F0853A00082DD31 /* ClimaVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD536011F0853A00082DD31 /* ClimaVC.swift */; };
 		EFD536051F0853A00082DD31 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFD536031F0853A00082DD31 /* Main.storyboard */; };
@@ -19,6 +21,8 @@
 		64514A1649BDF8F806B30742 /* Pods_myClima.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_myClima.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		900662EE55C8B4623A9DC661 /* Pods-myClima.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-myClima.release.xcconfig"; path = "Pods/Target Support Files/Pods-myClima/Pods-myClima.release.xcconfig"; sourceTree = "<group>"; };
 		E70D1409870B5295A162472A /* Pods-myClima.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-myClima.debug.xcconfig"; path = "Pods/Target Support Files/Pods-myClima/Pods-myClima.debug.xcconfig"; sourceTree = "<group>"; };
+		EF49C6B31F0DD11600FB8F72 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		EF49C6B51F0DD42700FB8F72 /* CurrentWeather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentWeather.swift; sourceTree = "<group>"; };
 		EFD535FC1F0853A00082DD31 /* myClima.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = myClima.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFD535FF1F0853A00082DD31 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EFD536011F0853A00082DD31 /* ClimaVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClimaVC.swift; sourceTree = "<group>"; };
@@ -108,6 +112,8 @@
 		EFD536131F0854C80082DD31 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				EF49C6B51F0DD42700FB8F72 /* CurrentWeather.swift */,
+				EF49C6B31F0DD11600FB8F72 /* Constants.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -238,6 +244,8 @@
 			files = (
 				EFD536021F0853A00082DD31 /* ClimaVC.swift in Sources */,
 				EFD536001F0853A00082DD31 /* AppDelegate.swift in Sources */,
+				EF49C6B61F0DD42700FB8F72 /* CurrentWeather.swift in Sources */,
+				EF49C6B41F0DD11600FB8F72 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

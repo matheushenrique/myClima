@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import CoreLocation
 import Alamofire
-class ClimaVC: UIViewController ,UITableViewDataSource,UITableViewDelegate{
+class ClimaVC: UIViewController ,UITableViewDataSource,UITableViewDelegate,CLLocationManagerDelegate{
 
     @IBOutlet weak var dateLbl: UILabel!
     @IBOutlet weak var tempLbl: UILabel!
@@ -16,23 +17,53 @@ class ClimaVC: UIViewController ,UITableViewDataSource,UITableViewDelegate{
     @IBOutlet weak var climaAtualLbl: UILabel!
     @IBOutlet weak var climaAtualImg: UIImageView!
     @IBOutlet weak var tbView: UITableView!
+    
+    let locationManager = CLLocationManager()
+    var currentLocation : CLLocation!
+    
     var currentWeather: CurrentWeather!
     var forecast: Forecast!
     var forecasts = [Forecast]()
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.startMonitoringSignificantLocationChanges()
+        
         tbView.delegate = self
         tbView.dataSource = self
         currentWeather = CurrentWeather()
-        currentWeather.downloadWeatherDetails {
-            // setup UI to load downloaded data
-            self.downloadForecastData {
-                self.updateMainUI()
+        
+    }
+    func locationAuthStatus(){
+        // checa se ja foi autorizado pelo o usuario o acesso ao gps do aparelho
+        if CLLocationManager.authorizationStatus() == .authorizedWhenInUse {
+            currentLocation = locationManager.location
+            Location.sharedInstance.latitude = currentLocation.coordinate.latitude
+            Location.sharedInstance.longitude = currentLocation.coordinate.longitude
+            currentWeather.downloadWeatherDetails {
+                // setup UI to load downloaded data
+                self.downloadForecastData {
+                    self.updateMainUI()
+                }
+                
             }
+        }else{
+            // se nao tiver sido autorizado, requisita ao usuario
+            locationManager.requestWhenInUseAuthorization()
+            // dessa forma o aplicativo so funcionara se o usuario permitir a localizacao
+            locationAuthStatus()
             
         }
     }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        locationAuthStatus()
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return forecasts.count
     }
@@ -88,6 +119,7 @@ class ClimaVC: UIViewController ,UITableViewDataSource,UITableViewDelegate{
             completed()
         }
     }
+    
 
 }
 
